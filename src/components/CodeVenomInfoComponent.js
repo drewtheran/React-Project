@@ -6,7 +6,7 @@ class CodeVenomInfo extends Component {
         return (
             <div class="col-md-5 m-1">
                 <Card>
-                    <CardImg top src={aspect.image} alt={aspect.name}/>
+                    <CardImg top src={aspect.image} alt={aspect.name} style={{marginTop:'200px'}}/>
                     <CardBody>
                         <CardTitle></CardTitle>
                         <CardText></CardText>
