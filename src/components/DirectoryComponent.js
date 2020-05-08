@@ -1,54 +1,22 @@
 import React, { Component } from 'react';
-
+import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import CodeVenomInfo from './CodeVenomInfoComponent';
 
 class Directory extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            snakes: [
-                {
-                    id: 0,
-                    name: 'Black Mamba',
-                    image: 'assets/img_snakes/Black_Mamba.jpg',
-                    description: "Roaming the sub-Saharan, central, western and southern savannas of Africa, the Black Mamba has one of the most deadly venom's in the world. It's neurotoxic and cardiotoxic venom is so toxic it can kill an adult human in just two drops. In addition to the deadly properties, the Black Mamba's venom has been discovered to contain pain-killing proteins known as mambalgins. After this discovery, we started to extract venom from this magnificent creature, and from there, we started manufacturing one of the world's most proficient painkillers."
-                },
-                {
-                    id: 1,
-                    name: 'Eastern Brown Snake',
-                    image: 'assets/img_snakes/Eastern_Brown_Snake.jpg',
-                },
-                {
-                    id: 2,
-                    name: 'Golden Lancehead Viper',
-                    image: 'assets/img_snakes/Golden_Lancehead_Viper.jpg',
-                },
-                {
-                    id: 3,
-                    name: 'King Cobra',
-                    image: 'assets/img_snakes/King_Cobra.jpg',
-                },
-                {
-                    id: 4,
-                    name: 'Mojave Rattlesnake',
-                    image: 'assets/img_snakes/Mojave_Rattlesnake.jpg'
-                },
-                {
-                    id: 5,
-                    name: 'Pygmy Rattlesnake',
-                    image: 'assets/img_snakes/Pygmy_Rattlesnake.jpg'
-                }
-            ],
+
         };
     }
 
-
     render() {
-        const directory = this.state.snakes.map(snake => {
+        const directory = this.props.aspects.map (aspect => {
             return (
-                <div className="col">
-                    <img src={snake.image} alt={snake.name} />
-                    <h2>{snake.name}</h2>
-                    <p>{snake.description}</p>
+                <div key={aspect.id} className="col">
+                    <img src={aspect.image} alt={aspect.name} />
+                    <h2>{aspect.name}</h2>
+                    <p>{aspect.description}</p>
                 </div>
             );
         });

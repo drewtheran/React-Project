@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { Navbar, NavbarBrand } from 'reactstrap';
 import Directory from './components/DirectoryComponent';
 import './App.css';
+import { ASPECTS } from './shared/aspects';
 
 class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            aspects: ASPECTS
         };
   }
   
@@ -19,7 +20,7 @@ class App extends Component {
                     <NavbarBrand href="/">Code Venom</NavbarBrand>
                 </div>
                 </Navbar>
-                <Directory />
+                <Directory aspects={this.state.aspects} />
             </div>
         );
     } 
