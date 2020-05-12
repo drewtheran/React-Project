@@ -32,7 +32,7 @@ class Directory extends Component {
         const directory = this.props.aspects.map (aspect => {
             return (
                 <div key={aspect.id} className="col-md-5 m-4">
-                    <Card onClick={() => this.onAspectSelect(aspect)}>
+                    <Card>
                         <CardImg width='100%' src={aspect.image} alt={aspect.name} />
                         <CardImgOverlay>
                             <CardTitle>{aspect.name}</CardTitle>
