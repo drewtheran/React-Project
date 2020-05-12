@@ -3,6 +3,8 @@ import { Navbar, NavbarBrand } from 'reactstrap';
 import Directory from './DirectoryComponent';
 import AspectInfo from './AspectInfoComponent';
 import { ASPECTS } from '../shared/aspects';
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
 
 class Main extends Component {
     constructor(props) {
@@ -25,8 +27,10 @@ class Main extends Component {
                         <NavbarBrand href="/">Code Venom</NavbarBrand>
                     </div>
                 </Navbar>
+                <Header />
                 <Directory aspects={this.state.aspects} onClick={aspectId => this.onAspectSelect(aspectId)}/>
                 <AspectInfo aspect={this.state.aspects.filter(aspect => aspect.id === this.state.selectedAspect)[0]}/>
+                <Footer />
             </div>
         );
     };

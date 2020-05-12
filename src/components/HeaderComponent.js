@@ -17,10 +17,12 @@ class Header extends Component {
                 </Jumbotron>
                 <Navbar dark sticky="top">
                     <div className="container">
-                        <NavbarBrand>Code Venom</NavbarBrand>
+                        <NavbarBrand href="/">Code Venom</NavbarBrand>
                     </div>
                 </Navbar>
             </React.Fragment>
         );
     }
 }
+
+export default Header;
