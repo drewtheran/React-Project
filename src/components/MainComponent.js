@@ -22,11 +22,7 @@ class Main extends Component {
     render() {
         return (
             <div>
-                <Navbar dark color="secondary">
-                    <div className="container">
-                        <NavbarBrand href="/">Code Venom</NavbarBrand>
-                    </div>
-                </Navbar>
+                
                 <Header />
                 <Directory aspects={this.state.aspects} onClick={aspectId => this.onAspectSelect(aspectId)}/>
                 <AspectInfo aspect={this.state.aspects.filter(aspect => aspect.id === this.state.selectedAspect)[0]}/>
