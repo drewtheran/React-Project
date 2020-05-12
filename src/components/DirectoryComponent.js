@@ -31,7 +31,7 @@ class Directory extends Component {
     render() {
         const directory = this.props.aspects.map (aspect => {
             return (
-                <div key={aspect.id} className="col-md-5 m-5">
+                <div key={aspect.id} className="col-md-5 m-4">
                     <Card onClick={() => this.onAspectSelect(aspect)}>
                         <CardImg width='100%' src={aspect.image} alt={aspect.name} />
                         <CardImgOverlay>

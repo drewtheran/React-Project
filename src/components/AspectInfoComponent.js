@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
+import { ASPECTS } from '../shared/aspects';
 
 class CodeVenomInfo extends Component {
     renderCode(aspect) {
@@ -8,8 +9,8 @@ class CodeVenomInfo extends Component {
                 <Card>
                     <CardImg top src={aspect.image} alt={aspect.name} style={{marginTop:'200px'}}/>
                     <CardBody>
-                        <CardTitle></CardTitle>
-                        <CardText></CardText>
+                        <CardTitle>{aspect.name}</CardTitle>
+                        <CardText>{aspect.description}</CardText>
                     </CardBody>
                 </Card>
             </div>
@@ -32,6 +33,20 @@ class CodeVenomInfo extends Component {
                 <div></div>
             )
         }
+    }
+    
+    render() {
+        if (this.props.aspect) {
+            return (
+                <div className="container">
+                    <div className="row">
+                    {this.renderAspect(this.props.aspect)}
+                    {this.renderComments(this.props.aspect.comments)}
+                    </div>
+                </div>
+            )
+        }
+        return <div />;
     }
 }
 
