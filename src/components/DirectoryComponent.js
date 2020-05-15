@@ -1,60 +1,47 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
+import { Card, CardImg, CardImgOverlay, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
-class Directory extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selectedAspect: null
-        };
-    }
+function RenderDirectoryItem({aspect, onClick}) {
+    return (
+        <Card>
+            <CardImg width="100%" src={aspect.image} alt={aspect.name} />
+            <CardImgOverlay>
+                <CardTitle>{aspect.name}</CardTitle>
+            </CardImgOverlay>
+        </Card>
+    );
+}
 
-    onAspectSelect(aspect) {
-        this.setState({selectedAspect: aspect});
-    }
+function Directory(props) {
 
-    renderSelectedAspect(aspect) {
-        if (aspect) {
-            return (
-                <Card>
-                    <CardImg top src={aspect.image} alt={aspect.name}/>
-                    <CardBody>
-                        <CardTitle>{aspect.name}</CardTitle>
-                        <CardText>{aspect.description}</CardText>
-                    </CardBody>
-                </Card>
-            );
-        }
-        return <div />; //this is for if there isn't an aspect to pass through the method--so there is no error returned.
-    }
-
-    render() {
-        const directory = this.props.aspects.map (aspect => {
-            return (
-                <div key={aspect.id} className="col-md-5 m-4">
-                    <Card>
-                        <CardImg width='100%' src={aspect.image} alt={aspect.name} />
-                        <CardImgOverlay>
-                            <CardTitle>{aspect.name}</CardTitle>
-                        </CardImgOverlay>
-                    </Card>
-                </div>
-            );
-        });
-        
+    const directory = props.aspects.map(aspect => {
         return (
-            <div className="container">
-                <div className="row">
-                    {directory}
-                </div>
-                <div className="row">
-                    <div className="col-md-5 m-1">
-                        {this.renderSelectedAspect(this.state.selectedAspect)}
-                    </div>
-                </div>
+            <div key={aspect.id} className="col-md-5 m-1">
+                <RenderDirectoryItem aspect={aspect}/>
             </div>
         );
-    }
+    });
+
+    return (
+        <div className="container">
+            <div className="row">
+                <div className="col">
+                    <Breadcrumb>
+                        <BreadcrumbItem><Link to="/home">Home</Link></BreadcrumbItem>
+                        <BreadcrumbItem active>Directory</BreadcrumbItem>
+                        <BreadcrumbItem><Link to="/aboutus">About Us</Link></BreadcrumbItem>
+                        <BreadcrumbItem><Link to="/contactus">Contact Us</Link></BreadcrumbItem>
+                    </Breadcrumb>
+                    <h2>Directory</h2>
+                    <hr />
+                </div>
+            </div>
+            <div className="row">
+                {directory}
+            </div>
+        </div>
+    );
 }
 
 export default Directory;

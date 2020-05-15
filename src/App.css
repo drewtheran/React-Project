@@ -12,7 +12,7 @@ h2 {
 
 .card-img-overlay h5 {
   color: white;
-  background-color: rgba(83, 83, 77, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .row-content {
@@ -22,21 +22,21 @@ h2 {
 }
 
 .site-footer {
-  background-image: linear-gradient(rgb(247, 255, 200), white);
+  background-image: linear-gradient( rgb(221, 210, 55), rgb(219, 147, 14), rgb(221, 44, 20));
   padding: 20px 0;
 }
 
 .jumbotron {
   margin: 0;
   padding: 30px;
-  background-image: linear-gradient(to right, rgb(221, 80, 55), rgb(197, 138, 48), rgb(185, 183, 42));
+  background-image: linear-gradient(to right, rgb(221, 210, 55), rgb(219, 147, 14), rgb(221, 44, 20));
   color: white;
 }
 
 .jumbotron h2 {
-  color: rgb(245, 245, 245);
+  color: rgb(255, 255, 255);
 }
 
 .navbar-dark {
-  background-color: rgb(199, 194, 127);
+  background-color: rgb(199, 130, 3);
 }

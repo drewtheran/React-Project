@@ -5,45 +5,65 @@ import AspectInfo from './AspectInfoComponent';
 import { ASPECTS } from '../shared/aspects';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
+import { SPONSORS } from '../shared/sponsors';
+import { PROMOTIONS } from '../shared/promotions';
+import Contact from './ContactComponent';
+import About from './AboutComponent';
 import Home from './HomeComponent';
-import Contact from './ContactComponent'
 import { Switch, Route, Redirect } from 'react-router-dom';
+
+
 
 class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            aspects: ASPECTS
+            aspects: ASPECTS,
+            sponsors: SPONSORS,
+            promotions: PROMOTIONS
         };
     }
 
-    onAspectSelect(aspectId) {
-        this.setState({selectedAspect: aspectId});
-    }
 
     render() {
-
         const HomePage = () => {
             return (
-                <Home />
+                <Home 
+                    aspect={this.state.aspects.filter(aspect => aspect.featured)[0]}
+                    promotion={this.state.promotions.filter(promotion => promotion.featured)[0]}
+                    sponsor={this.state.sponsors.filter(sponsor => sponsor.featured)[0]}
+                />
             );
         }
+
+        const AspectWithId = ({match}) => {
+            return (
+                <AspectInfo 
+                    aspect={this.state.aspects.filter(aspect => aspect.id === +match.params.aspectId)[0]}
+                />
+            );
+        }; 
 
         return (
             <div>
                 <Header />
                 <Switch>
                     <Route path='/home' component={HomePage} />
+
                     <Route exact path='/directory' render={() => <Directory aspects={this.state.aspects} />} />
+
+                    <Route path='/directory/:aspectId' component={AspectWithId} />
+
+                    <Route exact path='/aboutus' render={() => <About sponsors={this.state.sponsors} /> }/>
+
                     <Route exact path='/contactus' component={Contact} />
+
                     <Redirect to='/home'/>
                 </Switch>
-                <Directory aspects={this.state.aspects} onClick={aspectId => this.onAspectSelect(aspectId)}/>
-                <AspectInfo aspect={this.state.aspects.filter(aspect => aspect.id === this.state.selectedAspect)[0]}/>
                 <Footer />
             </div>
         );
-    };
-}
+    }
+};
 
 export default Main;

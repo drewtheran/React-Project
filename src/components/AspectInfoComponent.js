@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 import { ASPECTS } from '../shared/aspects';
 
-class CodeVenomInfo extends Component {
-    renderCode(aspect) {
+
+
+
+    
+
+    function RenderCode(aspect) {
         return (
             <div class="col-md-5 m-1">
                 <Card>
@@ -21,33 +25,21 @@ class CodeVenomInfo extends Component {
             </div>
         )
     }
-    renderComments(comments) {
-        if (comments) {
-            return (
-                <div class ="col-md-5 m-1">
-                    <h4>"Comments"</h4>
-                </div>
-            )
-            {comments.map(comments => <div key={comments.id}>{comments.name} - {comments.continent}</div>)}
-            return (
-                <div></div>
-            )
-        }
-    }
     
-    render() {
-        if (this.props.aspect) {
+    function CodeVenomInfo(props) {
+        if (props.aspect) {
             return (
                 <div className="container">
                     <div className="row">
-                    {this.renderAspect(this.props.aspect)}
-                    {this.renderComments(this.props.aspect.comments)}
+                        <RenderCode aspect={props.aspect} />
                     </div>
                 </div>
-            )
-        }
-        return <div />;
+            );
     }
+    return <div />
 }
+
+    
+
 
 export default CodeVenomInfo;

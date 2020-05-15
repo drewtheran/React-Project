@@ -1,5 +1,5 @@
 import React, { Component }  from 'react';
-import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
+import { Nav, Navbar, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
 import { NavLink } from 'react-router-dom'
 
 class Header extends Component {
@@ -25,7 +25,7 @@ class Header extends Component {
                 <Jumbotron fluid>
                     <div className="container">
                         <div className="row">
-                            <div className="col">
+                            <div className="col-md-16 col-md-offset-3">
                                 <h1>Code Venom</h1>
                                 <h2>a team meant to find all your pharmaceutical needs</h2>
                             </div>
@@ -34,11 +34,6 @@ class Header extends Component {
                 </Jumbotron>
                 <Navbar dark sticky="top" expand="md">
                     <div className="container">
-                        <NavbarBrand className="mr-auto" href="/">
-                            <img src="/assets/images.logo.png" 
-                            height="30" width="30" alt="NuCamp Logo"
-                            />
-                        </NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
