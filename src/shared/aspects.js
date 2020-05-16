@@ -2,25 +2,29 @@ export const ASPECTS = [
     {
         id: 0,
         name: 'Regions',
-        image: 'assets/img_regions/globe_regions.jpg',
-        description: 'These are the regions we collect venom for medicinal research.'
+        image: 'assets/images/globe_regions.jpg',
+        description: 'These are the regions we collect venom for medicinal research.',
+        featured: false,
     },
     {
         id: 1,
         name: 'Medicines',
-        image: 'assets/img_medicines/Captopril.jpg',
-        description: 'Here are some medicines that have been developed through our work.'
+        image: 'assets/images/Captopril.jpg',
+        description: 'Here are some medicines that have been developed through our work.',
+        featured: false,
     },
     {
         id: 2,
         name: 'Spiders',
-        image: 'assets/img_spiders/Tarantula.jpg',
-        description: 'These are spiders with venoms needed to develop the most effective painkillers.'
+        image: 'assets/images/Tarantula.jpg',
+        description: 'These are spiders with venoms needed to develop the most effective painkillers.',
+        featured: false,
     },
     {
         id: 3,
         name: 'Snakes',
-        image: 'assets/img_snakes/Pygmy_Rattlesnake.jpg',
-        description: 'These are snakes with venoms needed to develop the most effective medical treatments.'
+        image: 'assets/images/Pygmy_Rattlesnake.jpg',
+        description: 'These are snakes with venoms needed to develop the most effective medical treatments.',
+        featured: true,
     }
 ]

@@ -47,44 +47,25 @@ function About(props) {
                     <p>Our mission is to provide doctors and pharmeceutical companies with the best solutions towards tending to the sick, and .</p>
                 </div>
                 <div className="col-sm-6">
+                    <h3>Services</h3>
+                    <p>We provide a variety of services. We perform antivenom production, we produce medications with the proper venom properties, and we have a team consisting of medical scientists and doctors with 10+ years of experience. </p>
+                </div>
+                <div className="col-sm-6">
                     <Card>
-                        <CardHeader className="bg-primary text-white"><h3>Facts At a Glance</h3></CardHeader>
+                        <CardHeader className="bg-danger text-white"><h3>Facts At a Glance</h3></CardHeader>
                         <CardBody>
                             <dl className="row">
                                 <dt className="col-6">Founded</dt>
                                 <dd className="col-6">February 3, 2012</dd>
-                                <dt className="col-6">No. of Campsites in 2019</dt>
-                                <dd className="col-6">563</dd>
+                                <dt className="col-6">No. of Concotions in 2019</dt>
+                                <dd className="col-6">300</dd>
                                 <dt className="col-6">No. of Reviews in 2019</dt>
-                                <dd className="col-6">4388</dd>
+                                <dd className="col-6">5000</dd>
                                 <dt className="col-6">Employees</dt>
-                                <dd className="col-6">42</dd>
+                                <dd className="col-6">300</dd>
                             </dl>
                         </CardBody>
                     </Card>
-                </div>
-                <div className="col">
-                    <Card className="bg-light mt-3">
-                        <CardBody>
-                            <blockquote className="blockquote">
-                                <p className="mb-0">I will not follow where the path may lead, but I will go where there is no path, and I will leave a trail.</p>
-                                <footer className="blockquote-footer">Muriel Strode,{' '}
-                                    <cite title="Source Title">"Wind-Wafted Wild Flowers" -
-                                    The Open Court, 1903</cite>
-                                </footer>
-                            </blockquote>
-                        </CardBody>
-                    </Card>
-                </div>
-            </div>
-            <div className="row row-content">
-                <div className="col-12">
-                    <h3>Community Sponsors</h3>
-                </div>
-                <div className="col mt-4">
-                    <Media list>
-                        {sponsors}
-                    </Media>
                 </div>
             </div>
         </div>

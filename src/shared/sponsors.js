@@ -2,25 +2,26 @@ export const SPONSORS = [
     {
         id: 0,
         name: "Johnson & Johnson",
-        image: "../public/assets/img_sponsors/Johnson&Johnson.jpg",
+        image: "assets/images/Johnson&Johnson.jpg",
         featured: false,
     },
     {
         id: 1,
         name: "Novartis",
-        image: "../public/assets/img_sponsors/Novartis.jpg",
+        image: "assets/images/Novartis.jpg",
         featured: false,
     },
     {
         id: 2,
         name: "Roche",
-        image: "../public/assets/img_sponsors/Roche.jpg",
+        image: "assets/images/Roche.jpg",
         featured: false,
     },
     {
         id: 3,
         name: "Pfizer",
-        image: "../public/assets/img_sponsors/Sanofi.jpg",
+        image: "assets/images/pfizer.jpeg",
         featured: true,
+        description: "Take a look at our sponsors. They are evidence that we can produce the most high end medicinal venom."
     }
 ]

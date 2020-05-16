@@ -10,7 +10,16 @@ import { PROMOTIONS } from '../shared/promotions';
 import Contact from './ContactComponent';
 import About from './AboutComponent';
 import Home from './HomeComponent';
-import { Switch, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+const mapStateToProps = state => {
+    return {
+        aspects: state.aspects,
+        sponsors: state.sponsors,
+        promotions: state.promotions
+    };
+};
 
 
 

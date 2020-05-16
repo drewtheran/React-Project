@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
-function RenderCard(item) {
+function RenderCard({item}) {
     return (
         <Card>
             <CardImg src={item.image} alt={item.name} />
@@ -21,7 +21,10 @@ function Home(props) {
                     <RenderCard item={props.aspect} />
                 </div>
                 <div className="col-md m-1">
-                    <RenderCard item={props.promotion}/>
+                    <RenderCard item={props.promotion} />
+                </div>
+                <div className="col-md m-1">
+                    <RenderCard item={props.sponsor} />
                 </div>
             </div>
         </div>
