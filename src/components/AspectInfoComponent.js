@@ -3,10 +3,6 @@ import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 import { ASPECTS } from '../shared/aspects';
 
 
-
-
-    
-
     function RenderCode(aspect) {
         return (
             <div class="col-md-5 m-1">

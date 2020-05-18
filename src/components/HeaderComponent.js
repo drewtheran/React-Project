@@ -25,44 +25,38 @@ class Header extends Component {
                 <Jumbotron fluid>
                     <div className="container">
                         <div className="row">
-                            <div className="col-md-16 col-md-offset-3">
+                            <div className="col-md-6 col-md-offset-2">
                                 <h1>Code Venom</h1>
                                 <h2>a team meant to find all your pharmaceutical needs</h2>
                             </div>
                         </div>
                     </div>
                 </Jumbotron>
-                <Navbar dark sticky="top" expand="md">
+                <Navbar dark sticky="top" expand="lg">
                     <div className="container">
-                        <NavbarToggler onClick={this.toggleNav} />
-                        <Collapse isOpen={this.state.isNavOpen} navbar>
-                            <Nav navbar>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/home">
-                                        <i className="fa fa-home fa-lg"/>
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/directory">
-                                        <i className="fa fa-list fa-lg"/>
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/services">
-                                        <i className="far fa-concierge-bell fa-lg"/>
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/aboutus">
-                                        <i className="fa fa-info fa-lg"/> 
-                                    </NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink className="nav-link" to="/contactus">
-                                        <i className="fa fa-address-card fa-lg"/>
-                                    </NavLink>
-                                </NavItem>
-                            </Nav>
+                         <NavbarToggler onClick={this.toggleNav} />
+                             <Collapse isOpen={this.state.isNavOpen} navbar>
+                             <Nav navbar>
+                                        <NavItem>
+                                            <NavLink className="nav-link" to="/home">
+                                                <i className="fa fa-home fa-lg"/>                                            </NavLink>
+                                        </NavItem>
+                                        <NavItem>
+                                            <NavLink className="nav-link" to="/directory">
+                                                        <i className="fa fa-list fa-lg"/>
+                                            </NavLink>
+                                        </NavItem>
+                                        <NavItem>
+                                                <NavLink className="nav-link" to="/aboutus">
+                                                    <i className="fa fa-info fa-lg"/> 
+                                                </NavLink>
+                                        </NavItem>
+                                        <NavItem>
+                                            <NavLink className="nav-link" to="/contactus">
+                                                <i className="fa fa-address-card fa-lg"/>
+                                            </NavLink>
+                                        </NavItem>
+                                </Nav>
                         </Collapse>
                     </div>
                 </Navbar>

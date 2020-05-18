@@ -35,6 +35,7 @@ function Directory(props) {
                     </Breadcrumb>
                     <h2>Directory</h2>
                     <hr />
+                    <h4>Here is our directory of services.</h4>
                 </div>
             </div>
             <div className="row">

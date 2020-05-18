@@ -7,8 +7,9 @@ font-family: "Lobster", cursive;
 }
 
 h1, h2, h4, h5 {
-  color: rgb(233, 0, 0);
+  color:  rgb(255, 175, 70);
 }
+
 
 
 .card-img-overlay h5 {
@@ -23,21 +24,21 @@ h1, h2, h4, h5 {
 }
 
 .site-footer {
-  background-image: linear-gradient( rgb(221, 210, 55), rgb(219, 147, 14), rgb(221, 44, 20));
+  background-color: yellow;
   padding: 20px 0;
 }
 
 .jumbotron {
   margin: 0;
   padding: 30px;
-  background-image: linear-gradient(to right, rgb(221, 210, 55), rgb(219, 147, 14), rgb(221, 44, 20));
-  color: rgb(233, 0, 0);
+  background-color: yellow;
+  color: rgb(255, 175, 70);
 }
 
 .jumbotron h2 {
-  color: rgb(233, 0, 0);
+  color: rgb(255, 175, 70);
 }
 
 .navbar-dark {
-  background-color: rgb(199, 130, 3);
+  background-color: rgb(255, 175, 70);
 }

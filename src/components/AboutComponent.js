@@ -21,11 +21,7 @@ function RenderSponsor(sponsor) {
 
 function About(props) {
     
-   const sponsors = props.sponsors.map(sponsor => {
-        return (
-            <Media tag="li" key={sponsor.id}><RenderSponsor sponsor={sponsor} /></Media>
-        );
-    });
+
     
     return (
         <div className="container">
@@ -42,7 +38,7 @@ function About(props) {
                 </div>
             </div>
             <div className="row row-content">
-                <div className="col-sm-6">
+                <div  className="col-sm-6">
                     <h3>Our Mission</h3>
                     <p>Our mission is to provide doctors and pharmeceutical companies with the best solutions towards tending to the sick, and .</p>
                 </div>
@@ -52,7 +48,7 @@ function About(props) {
                 </div>
                 <div className="col-sm-6">
                     <Card>
-                        <CardHeader className="bg-danger text-white"><h3>Facts At a Glance</h3></CardHeader>
+                        <CardHeader className="bg-warning text-white"><h3>Facts At a Glance</h3></CardHeader>
                         <CardBody>
                             <dl className="row">
                                 <dt className="col-6">Founded</dt>
